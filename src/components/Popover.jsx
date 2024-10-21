@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { FaPhone } from 'react-icons/fa6';
+import { MdOutlineAttachEmail } from "react-icons/md";
+import { MdOutlineContactSupport } from "react-icons/md";
+
+
 
 const Popover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
@@ -49,25 +53,25 @@ const Popover = () => {
           </div>
           <div className='px-3 py-2 gap-2'>
             <a
-              href='tel:954435738'
+              href='tel:954000000'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
-              <FaPhone className='mt-1' />
-              954435738
+              <FaPhone size={20}/>
+              954 000 000
             </a>
             <a
               href='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
-              <FaPhone className='mt-1' />
-              954435738
+              <MdOutlineAttachEmail size={20}/>
+              joyeria@joyeriaatlantico.com
             </a>
             <a
               href='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
-              <FaPhone className='mt-1' />
-              954435738
+              <MdOutlineContactSupport size={20}/>
+              Contacta con nosotros
             </a>
           </div>
           <div data-popper-arrow></div>
