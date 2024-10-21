@@ -4,25 +4,8 @@ import { IoIosArrowDropright } from "react-icons/io";
 
 
 
-const Cover = () => {
-  const coverImages = [
-    {
-      id: 1,
-      url: '/assets/img/jaguar/jaguar_banner.png',
-    },
-    {
-      id: 2,
-      url: '/assets/img/orient/orient_banner.png',
-    },
-    {
-      id: 3,
-      url: '/assets/img/seiko/seiko_banner.png',
-    },
-    {
-      id: 4,
-      url: '/assets/img/victorinox/victorinox_banner.png',
-    },
-  ];
+const Cover = ({ coverImages }) => {
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
