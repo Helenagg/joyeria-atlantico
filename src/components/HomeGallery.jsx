@@ -20,7 +20,7 @@ const HomeGallery = () => {
             <img className="h-auto max-w-full rounded-lg border p-2" src="/assets/img/seiko/SRPG05J1.jpg" alt="" />
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg ml-24" src="/assets/img/seiko/2022Authorized-Global-Brand-Retailer.jpg" alt="" />
+            <img className="h-auto max-w-full rounded-lg " src="/assets/img/seiko/2022Authorized-Global-Brand-Retailer.jpg" alt="" />
         </div>
     </div>
     <div className="grid gap-4">
