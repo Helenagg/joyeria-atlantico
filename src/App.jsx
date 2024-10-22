@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import WatchStore from './pages/WatchStore';
 import Footer from './components/Footer';
+import WhatsAppPopup from './components/WhatsAppPopup';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/relojes' element={<WatchStore />} />
       </Routes>
+      <WhatsAppPopup />
       <Footer />
       <Outlet />
     </>
