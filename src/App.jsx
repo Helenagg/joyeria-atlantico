@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import WatchStore from './pages/WatchStore';
 import Footer from './components/Footer';
 import WhatsAppPopup from './components/WhatsAppPopup';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/relojes' element={<WatchStore />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <WhatsAppPopup />
       <Footer />
