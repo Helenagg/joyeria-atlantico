@@ -1,7 +1,7 @@
 import Brands from "../components/Brands"
-import Cover from "../components/Cover"
 import HomeGallery from "../components/HomeGallery"
 import Presentation from "../components/Presentation"
+import Watches from "../components/Watches"
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
         <HomeGallery />
         <Presentation />
         <Brands />
+        <Watches />
     </div>
   )
 }
