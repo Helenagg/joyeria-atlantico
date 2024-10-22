@@ -77,7 +77,7 @@ const NavBar = () => {
             </li>
             <li>
               <a
-                href='#'
+                href='/contact'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Localízame
               </a>

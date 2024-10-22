@@ -1,6 +1,7 @@
 import { FaFacebookSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { AiFillTikTok } from 'react-icons/ai';
+import { FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -36,6 +37,12 @@ const Footer = () => {
               >
                 <AiFillTikTok size={30}/>
               </a>
+              <a
+                href='#'
+                className='text-secondary hover:text-gray-900 dark:hover:text-white ms-5'
+              >
+                <FaLinkedin size={30}/>
+              </a>
             </div>
           </div>
 
@@ -57,7 +64,7 @@ const Footer = () => {
                 </li>
                 <li className='mb-4'>
                   <a
-                    href='https://tailwindcss.com/'
+                    href='/contact'
                     className='hover:underline'
                   >
                     Localízame
