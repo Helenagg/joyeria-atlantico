@@ -25,7 +25,7 @@ const Watches = () => {
       ]
   return (
     <div className='justify-items-center text-center mt-10'>
-      <h2 className='text-3xl mb-10'>Relojería</h2>
+      <h2 className='text-3xl mb-10 text-primary font-semibold'>Relojería</h2>
       <ImageCarousel images={watchImages} />
     </div>
   );

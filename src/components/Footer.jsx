@@ -18,21 +18,21 @@ const Footer = () => {
             <div className='flex mt-10 sm:justify-center'>
               <a
                 href='#'
-                className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
+                className='text-secondary hover:text-gray-900 dark:hover:text-white'
               >
                 <FaFacebookSquare size={30} />
               </a>
 
               <a
                 href='#'
-                className='text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5'
+                className='text-secondary hover:text-gray-900 dark:hover:text-white ms-5'
               >
                 <FaSquareXTwitter size={30}/>
               </a>
 
               <a
                 href='#'
-                className='text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5'
+                className='text-secondary hover:text-gray-900 dark:hover:text-white ms-5'
               >
                 <AiFillTikTok size={30}/>
               </a>
@@ -41,7 +41,7 @@ const Footer = () => {
 
           <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
             <div>
-              <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+              <ul className='text-secondary dark:text-gray-400 font-medium'>
                 <li className='mb-4'>
                   <a href='https://flowbite.com/' className='hover:underline'>
                     Home
@@ -66,7 +66,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+              <ul className='text-secondary dark:text-gray-400 font-medium'>
                 <li className='mb-4'>
                   <a
                     href='https://github.com/themesberg/flowbite'
@@ -94,7 +94,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <ul className='text-gray-500 dark:text-gray-400 font-medium'>
+              <ul className='text-secondary dark:text-gray-400 font-medium'>
                 <li className='mb-4'>
                   <a href='#' className='hover:underline'>
                     Política de privacidad
@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
+        <hr className='my-6 border-primary border-2 sm:mx-auto dark:border-gray-700 lg:my-8' />
         <div className='sm:flex sm:items-center sm:justify-center'>
           <img src='/assets/img/logos/PORTADA_LOGO_COLOR.jpg' alt='Logo Fondos Europeos' className='w-1/5'/>
           <img src='/assets/img/logos/logo-fondos-europeos-next-generation.webp' alt='Logo Fondos Next Generation' className='w-1/3'/>
