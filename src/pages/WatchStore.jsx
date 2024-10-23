@@ -1,4 +1,5 @@
 import Cover from "../components/Cover"
+import Watches from "../components/Watches";
 
 const watches = [
     {
@@ -23,6 +24,7 @@ const WatchStore = () => {
   return (
     <div className="mt-20 mx-6">
     <Cover coverImages={watches}/>
+    <Watches />
 </div>
   )
 }
