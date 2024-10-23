@@ -754,6 +754,10 @@ video {
   height: 18rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -764,10 +768,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-96 {
-  height: 24rem;
 }
 
 .w-1\/3 {
@@ -1191,11 +1191,6 @@ video {
 
 .shadow-secondary {
   --tw-shadow-color: #958d83;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-primary {
-  --tw-shadow-color: #8b2c35;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

@@ -1,7 +1,7 @@
 import Brands from "../components/Brands"
 import HomeGallery from "../components/HomeGallery"
 import Presentation from "../components/Presentation"
-import Watches from "../components/Watches"
+import WatchesHome from "../components/WatchesHome"
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <HomeGallery />
         <Presentation />
         <Brands />
-        <Watches />
+        <WatchesHome />
     </div>
   )
 }

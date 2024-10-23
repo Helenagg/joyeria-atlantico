@@ -1,6 +1,6 @@
 import ImageCarousel from "./ImageCarousel";
 
-const Watches = () => {
+const WatchesHome = () => {
     const watchImages = [
         {
           src: '/assets/img/jaguar/j1011_2.jpg',
@@ -31,4 +31,4 @@ const Watches = () => {
   );
 };
 
-export default Watches;
+export default WatchesHome;
