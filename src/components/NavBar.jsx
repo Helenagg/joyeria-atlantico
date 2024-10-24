@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Popover from './popover';
 import AccessibleLink from './Accessibility/AccessibleLink';
+import AccessibleButton from './Accessibility/AccessibleButton';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,14 +23,16 @@ const NavBar = () => {
         </AccessibleLink>
         <div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
           <Popover />
-          <button
+          <AccessibleButton
             data-collapse-toggle='navbar-sticky'
             type='button'
             className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
             aria-controls='navbar-sticky'
             aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <span className='sr-only'>Open main menu</span>
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            ariaLabel='Abrir menu en móviles'
+            >
+            <span className='sr-only'>Abrir menu en móviles</span>
             <svg
               className='w-5 h-5'
               aria-hidden='true'
@@ -44,7 +47,7 @@ const NavBar = () => {
                 d='M1 1h15M1 7h15M1 13h15'
               />
             </svg>
-          </button>
+          </AccessibleButton>
         </div>
         <div
           className={`${isMenuOpen ? 'block' : 'hidden'} items-center justify-between w-full md:flex md:w-auto md:order-1`}

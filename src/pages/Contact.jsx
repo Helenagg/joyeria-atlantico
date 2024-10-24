@@ -4,6 +4,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaLinkedin } from 'react-icons/fa6';
 import { AiFillTikTok } from 'react-icons/ai';
 import AccessibleLink from '../components/Accessibility/AccessibleLink';
+import AccessibleButton from '../components/Accessibility/AccessibleButton';
 
 const Contact = () => {
   return (
@@ -25,13 +26,13 @@ const Contact = () => {
                   <div className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
                     <HiOutlineMail size={20} className='text-primary' />
                   </div>
-                  <a
+                  <AccessibleLink
                     href='mailto:joyeria@joyeriaatlantico.com'
                     className='text-secondary-green-dark text-sm ml-4'
                   >
                     <small className='block'>Correo electrónico</small>
                     <strong>joyeria@joyeriaatlantico.com</strong>
-                  </a>
+                  </AccessibleLink>
                 </li>
               </ul>
             </div>
@@ -96,12 +97,12 @@ const Contact = () => {
               rows='6'
               className='w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 outline-blue-500'
             ></textarea>
-            <button
+            <AccessibleButton
               type='button'
               className='text-white bg-primary hover:bg-secondary-dark rounded-md text-sm px-4 py-3 w-full !mt-6'
             >
               Enviar
-            </button>
+            </AccessibleButton>
           </form>
         </div>
       </div>

@@ -3,6 +3,8 @@ import { MdClose } from 'react-icons/md';
 import { FaPhone } from 'react-icons/fa6';
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { MdOutlineContactSupport } from "react-icons/md";
+import AccessibleButton from './Accessibility/AccessibleButton';
+import AccessibleLink from './Accessibility/AccessibleLink';
 
 
 
@@ -30,13 +32,13 @@ const Popover = () => {
 
   return (
     <>
-      <button
+      <AccessibleButton
         onClick={handlePopover}
         type='button'
         className='text-white me-4 bg-secondary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-500 font-medium rounded-lg text-sm px-4 py-2.5 text-center dark:bg-white dark:hover:bg-secondary dark:focus:ring-primary'
       >
         ¿Necesitas ayuda?
-      </button>
+      </AccessibleButton>
       {isPopoverOpen && (
         <div
           ref={popoverRef}
@@ -47,32 +49,32 @@ const Popover = () => {
             <h3 className='font-semibold text-gray-900 dark:text-white'>
               Contacto
             </h3>
-            <button type='button' onClick={handlePopover}>
+            <AccessibleButton ariaLabel='Cerrar' type='button' onClick={handlePopover}>
               <MdClose />
-            </button>
+            </AccessibleButton>
           </div>
           <div className='px-3 py-2 gap-2'>
-            <a
+            <AccessibleLink
               href='tel:954000000'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <FaPhone size={20}/>
               954 000 000
-            </a>
-            <a
+            </AccessibleLink>
+            <AccessibleLink
               href='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <MdOutlineAttachEmail size={20}/>
               joyeria@joyeriaatlantico.com
-            </a>
-            <a
+            </AccessibleLink>
+            <AccessibleLink
               href='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <MdOutlineContactSupport size={20}/>
               Contacta con nosotros
-            </a>
+            </AccessibleLink>
           </div>
           <div data-popper-arrow></div>
         </div>
