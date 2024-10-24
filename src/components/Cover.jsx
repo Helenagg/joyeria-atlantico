@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowDropleft } from "react-icons/io";
 import { IoIosArrowDropright } from "react-icons/io";
+import AccessibleButton from "./Accessibility/AccessibleButton";
 
 
 
@@ -45,33 +46,36 @@ const Cover = ({ coverImages }) => {
       </div>
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
     {coverImages.map((image, index) => (
-      <button
+      <AccessibleButton
         key={index}
         className={`w-3 h-3 rounded-full ${
           currentIndex === index ? 'bg-gray-800' : 'bg-gray-400'
         }`}
         onClick={() => setCurrentIndex(index)}
-        aria-label={`Go to slide ${index + 1}`}
-      ></button>
+        ariaLabel={`Ir a slide ${index + 1}`}
+      ></AccessibleButton>
     ))}
   </div>
-      <button
+      <AccessibleButton
         type='button'
         className='absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
         onClick={prevImage}
+        ariaLabel='Ir a imagen previa'
         >
         <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
           <IoIosArrowDropleft size={40} className="text-gray-600"/>
         </span>
-      </button>
-      <button
+      </AccessibleButton>
+      <AccessibleButton
         type='button'
         className='absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
-        onClick={nextImage}>
+        onClick={nextImage}
+        ariaLabel='Ir a imagen siguiente'
+        >
         <span className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'>
           <IoIosArrowDropright size={40} className="text-gray-600"/>
         </span>
-      </button>
+      </AccessibleButton>
     </div>
   );
 };

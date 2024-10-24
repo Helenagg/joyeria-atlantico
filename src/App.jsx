@@ -6,8 +6,11 @@ import WatchStore from './pages/WatchStore';
 import Footer from './components/Footer';
 import WhatsAppPopup from './components/WhatsAppPopup';
 import Contact from './pages/Contact';
+import Accesibility from './pages/Accesibility';
 
 function App() {
+
+  //TODO: review all alt attributes of all images for accessibility
   return (
     <>
       <NavBar />
@@ -15,6 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/relojes' element={<WatchStore />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/accesibilidad' element={<Accesibility />} />
       </Routes>
       <WhatsAppPopup />
       <Footer />
