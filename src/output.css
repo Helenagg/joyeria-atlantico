@@ -652,6 +652,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .\!mt-6 {
   margin-top: 1.5rem !important;
 }
@@ -706,6 +711,10 @@ video {
 
 .mt-28 {
   margin-top: 7rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mt-4 {
@@ -1118,6 +1127,11 @@ video {
 
 .font-\[sans-serif\] {
   font-family: sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl {
