@@ -3,6 +3,7 @@ import { FaFacebookSquare } from 'react-icons/fa';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaLinkedin } from 'react-icons/fa6';
 import { AiFillTikTok } from 'react-icons/ai';
+import AccessibleLink from '../components/Accessibility/AccessibleLink';
 
 const Contact = () => {
   return (
@@ -42,24 +43,33 @@ const Contact = () => {
 
               <ul className='flex mt-4 space-x-4'>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <a href='javascript:void(0)'>
+                  <AccessibleLink href='/'
+                  aria-label='Facebook de Joyería Atlántico'
+                  >
                     <FaFacebookSquare className='text-primary' size={20} />
-                  </a>
+                  </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <a href='javascript:void(0)'>
+                  <AccessibleLink
+                   href='/'
+                   aria-label='TikTok de Joyería Atlántico'
+                   >
                     <AiFillTikTok className='text-primary' size={20} />
-                  </a>
+                  </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <a href='javascript:void(0)'>
+                  <AccessibleLink href='/'
+                    aria-label='Twitter de Joyería Atlántico'
+                  >
                     <FaSquareXTwitter className='text-primary' size={20} />
-                  </a>
+                  </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <a href='javascript:void(0)'>
+                  <AccessibleLink href='/'
+                    aria-label='Linkedin de Joyería Atlántico'
+                  >
                     <FaLinkedin className='text-primary' size={20} />
-                  </a>
+                  </AccessibleLink>
                 </li>
               </ul>
             </div>
