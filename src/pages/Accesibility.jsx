@@ -11,13 +11,13 @@ const Accesibility = () => {
         del sector público. La presente declaración de accesibilidad se aplica
         al sitio web https://joyeriaatlantico.com/
       </p>
-      <h2 className='mt-10 text-center text-2xl text-primary font-bold'>
+      <h2 className='mt-10 text-2xl text-primary font-bold'>
         SITUACIÓN DE CUMPLIMIENTO
       </h2>
       <p className='mt-4 text-left text-secondary-green-dark'>
         Este sitio web es conforme con el Real Decreto 1112/2018.
       </p>
-      <h2 className='mt-10 text-center text-2xl text-primary font-bold'>
+      <h2 className='mt-10 text-2xl text-primary font-bold'>
         PREPARACIÓN DE LA PRESENTE DECLARACIÓN DE ACCESIBILIDAD
       </h2>
       <p className='mt-4 text-left text-secondary-green-dark'>
@@ -31,7 +31,7 @@ const Accesibility = () => {
         La Declaración de Accesibilidad ha sido revisada y actualizada el 1 de
         Noviembre 2024.
       </p>
-      <h2 className='mt-10 text-center text-2xl text-primary font-bold'>
+      <h2 className='mt-10 text-2xl text-primary font-bold'>
         OBSERVACIONES Y DATOS DE CONTACTO
       </h2>
       <p className='mt-4 text-left text-secondary-green-dark'>
@@ -79,7 +79,7 @@ const Accesibility = () => {
         sobre información accesible se realizarán a través del email
         joyeria@joyeriaatlantico.com
       </p>
-      <h2 className='mt-10 text-center text-2xl text-primary font-bold'>
+      <h2 className='mt-10 text-2xl text-primary font-bold'>
         PROCEDIMIENTO DE APLICACIÓN
       </h2>
       <p className='mt-4 text-left text-secondary-green-dark'>
@@ -97,7 +97,7 @@ const Accesibility = () => {
         serán recibidas y tratadas por la Subdirección General de Inspección de
         Servicios del Ministerio.
       </p>
-      <h2 className='mt-10 text-center text-2xl text-primary font-bold'>
+      <h2 className='mt-10 text-2xl text-primary font-bold'>
         CONTENIDO ADICIONAL
       </h2>
       <p className='mt-4 text-left text-secondary-green-dark'>

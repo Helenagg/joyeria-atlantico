@@ -117,9 +117,14 @@ const Footer = () => {
                     Aviso Legal
                   </AccessibleLink>
                 </li>
-                <li>
+                <li className='mb-4'>
                   <AccessibleLink href='/accesibilidad' className='hover:underline'>
                     Declaración de accesibilidad
+                  </AccessibleLink>
+                </li>
+                <li >
+                  <AccessibleLink href='/cookies' className='hover:underline'>
+                    Política de cookies
                   </AccessibleLink>
                 </li>
               </ul>
