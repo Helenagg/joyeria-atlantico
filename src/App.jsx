@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import WatchStore from './pages/WatchStore';
 import Footer from './components/Footer';
+import Cookies from './components/Cookies';
 import WhatsAppPopup from './components/WhatsAppPopup';
 import Contact from './pages/Contact';
 import Accesibility from './pages/Accesibility';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/privacidad' element={<Privacy />} />
       </Routes>
       <WhatsAppPopup />
+      <Cookies />
       <Footer />
       <Outlet />
     </>
