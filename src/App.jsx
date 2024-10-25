@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import WhatsAppPopup from './components/WhatsAppPopup';
 import Contact from './pages/Contact';
 import Accesibility from './pages/Accesibility';
+import Legal from './pages/Legal';
+import Privacy from './pages/Privacy';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path='/relojes' element={<WatchStore />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/accesibilidad' element={<Accesibility />} />
+        <Route path='/legal' element={<Legal />} />
+        <Route path='/privacidad' element={<Privacy />} />
       </Routes>
       <WhatsAppPopup />
       <Footer />
