@@ -4,12 +4,14 @@ import Home from './pages/Home';
 import NavBar from './components/NavBar';
 import WatchStore from './pages/WatchStore';
 import Footer from './components/Footer';
-import Cookies from './components/Cookies';
 import WhatsAppPopup from './components/WhatsAppPopup';
 import Contact from './pages/Contact';
 import Accesibility from './pages/Accesibility';
 import Legal from './pages/Legal';
 import Privacy from './pages/Privacy';
+import Cookies from './pages/Cookies';
+import CookiesBanner from './components/CookiesBanner';
+
 
 function App() {
 
@@ -24,9 +26,10 @@ function App() {
         <Route path='/accesibilidad' element={<Accesibility />} />
         <Route path='/legal' element={<Legal />} />
         <Route path='/privacidad' element={<Privacy />} />
+        <Route path='/cookies' element={<Cookies />} />
       </Routes>
       <WhatsAppPopup />
-      <Cookies />
+      <CookiesBanner />
       <Footer />
       <Outlet />
     </>

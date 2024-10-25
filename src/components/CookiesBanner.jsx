@@ -1,6 +1,6 @@
 import CookieConsent from 'react-cookie-consent';
 
-const Cookies = () => {
+const CookiesBanner = () => {
   // const loadGoogleAnalytics = () => {
   //     // Crea un elemento <script> para cargar Google Analytics
   //     const script = document.createElement("script");
@@ -73,4 +73,4 @@ const Cookies = () => {
   );
 };
 
-export default Cookies;
+export default CookiesBanner;
