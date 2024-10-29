@@ -1,7 +1,7 @@
-import { watchImages } from '../utils/watchesData';
+import { urlBase, watchImages } from '../utils/watchesData';
 import CardImage from './CardImage';
 
-  const url = '/assets/img/'
+  
 
 const Watches = () => {
   return (
@@ -16,7 +16,7 @@ const Watches = () => {
         {watchImages.map((img) => (
           <div key={img.id}>
             <CardImage
-              src={`${url}${img.brand}/${img.src}`}
+              src={`${urlBase}${img.brand}/${img.src}`}
               alt={`${img.description}{' '}${img.model}`}
               description={img.description}
               model={img.model}

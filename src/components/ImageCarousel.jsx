@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CardImage from './CardImage';
 import { IoIosArrowDropleft, IoIosArrowDropright } from 'react-icons/io';
 import AccessibleButton from './Accessibility/AccessibleButton';
+import { urlBase } from '../utils/watchesData';
 
 const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
