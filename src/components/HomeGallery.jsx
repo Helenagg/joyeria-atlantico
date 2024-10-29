@@ -1,29 +1,29 @@
 const HomeGallery = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div className="grid gap-4">
         <div>
-            <img className="h-auto max-w-full rounded-lg border p-2" src="/assets/img/jaguar/j860_D.jpg" alt="" />
+            <img className="h-auto max-w-full rounded-lg border" src="/assets/img/banner/victorinox.webp" alt="" />
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg ml-20" src="/assets/img/jaguar/jaguar-logo.jpg" alt="" />
+            <img className="h-auto max-w-full rounded-lg" src="/assets/img/banner/5.webp" alt="" />
         </div>
-        <div>
+        {/* <div>
             <img className="h-auto max-w-full rounded-lg border p-2" src="/assets/img/jaguar/j1010_1.jpg" alt="" />
-        </div>
+        </div> */}
     </div>
     <div className="grid gap-4">
         <div>
-            <img className="h-auto max-w-full rounded-lg border" src="/assets/img/seiko/SRPE99K1.jpg" alt="" />
+            <img className="h-auto max-w-full rounded-lg border" src="/assets/img/banner/1.webp" alt="" />
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg border p-2" src="/assets/img/seiko/SRPG05J1.jpg" alt="" />
+            <img className="h-auto max-w-full rounded-lg border" src="/assets/img/banner/seiko.webp" alt="" />
         </div>
-        <div>
+        {/* <div>
             <img className="h-auto max-w-full rounded-lg " src="/assets/img/seiko/2022Authorized-Global-Brand-Retailer.jpg" alt="" />
-        </div>
+        </div> */}
     </div>
-    <div className="grid gap-4">
+    {/* <div className="grid gap-4">
         <div>
             <img className="h-auto max-w-full rounded-lg" src="/assets/img/orient/orient-logo.jpg" alt="" />
         </div>
@@ -44,7 +44,7 @@ const HomeGallery = () => {
         <div>
             <img className="h-auto max-w-full rounded-lg ml-10" src="/assets/img/victorinox/logo.jpg" alt="" />
         </div>
-    </div>
+    </div> */}
 </div>
   )
 }

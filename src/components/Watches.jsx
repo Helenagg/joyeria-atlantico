@@ -1,32 +1,7 @@
+import { watchImages } from '../utils/watchesData';
 import CardImage from './CardImage';
 
-const watchImages = [
-  {
-    src: '/assets/img/jaguar/j1011_2.jpg',
-    description: 'Jaguar Modelo: J1011',
-    id: 1,
-  },
-  {
-    src: '/assets/img/jaguar/j671_a.jpg',
-    description: 'Jaguar Modelo: J671',
-    id: 2,
-  },
-  {
-    src: '/assets/img/jaguar/j688_1.jpg',
-    description: 'Jaguar Modelo: J688',
-    id: 3,
-  },
-  {
-    src: '/assets/img/jaguar/j964_3.jpg',
-    description: 'Jaguar Modelo: J964',
-    id: 4,
-  },
-  {
-    src: '/assets/img/jaguar/j988_1.jpg',
-    description: 'Jaguar Modelo: J988',
-    id: 5,
-  },
-];
+  const url = '/assets/img/'
 
 const Watches = () => {
   return (
@@ -41,12 +16,11 @@ const Watches = () => {
         {watchImages.map((img) => (
           <div key={img.id}>
             <CardImage
-              src={img.src}
-              alt={img.id}
+              src={`${url}${img.brand}/${img.src}`}
+              alt={`${img.description}{' '}${img.model}`}
               description={img.description}
-              price='150€'
-              isWatchesPage
-            />
+              model={img.model}
+              isWatchesPage />
           </div>
         ))}
       </div>

@@ -622,6 +622,11 @@ video {
   margin: 2rem;
 }
 
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .mx-56 {
   margin-left: 14rem;
   margin-right: 14rem;
@@ -655,11 +660,6 @@ video {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
 }
 
 .\!mt-6 {
