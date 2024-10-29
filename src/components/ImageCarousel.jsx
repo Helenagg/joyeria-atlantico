@@ -8,11 +8,16 @@ const ImageCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imagesToShow = 4;
 
+  const visibleImages = images.slice(currentIndex, currentIndex + imagesToShow);
+
   const handleNext = () => {
     if (currentIndex < images.length - imagesToShow) {
       setCurrentIndex(currentIndex + 1);
     }
   };
+
+  console.log('New images.len', Math.min(images.length, imagesToShow +1) * (100 / imagesToShow));
+  console.log('images', images.length * (100 / imagesToShow));
 
   const handlePrev = () => {
     if (currentIndex > 0) {
@@ -20,11 +25,18 @@ const ImageCarousel = ({ images }) => {
     }
   };
 
+  console.log('current', currentIndex);
+  
+
   return (
     <>
       <div className='block md:hidden'>
         {images.map((img) => (
-          <CardImage key={img.id} src={img.src} alt={img.id} />
+          <CardImage
+            key={img.id}
+            src={`${urlBase}${img.brand}/${img.src}`}
+            alt={img.id}
+          />
         ))}
       </div>
       <div className='hidden md:block'>
@@ -47,11 +59,16 @@ const ImageCarousel = ({ images }) => {
                   transform: `translateX(-${
                     currentIndex * (80 / imagesToShow)
                   }%)`,
-                  width: `${images.length * (100 / imagesToShow)}%`,
+                  width: `${(visibleImages.length * 100) / imagesToShow}%`,
+                  // width: `${Math.min(images.length, imagesToShow + 1) * (100 / imagesToShow)}%`
                 }}
               >
                 {images.map((img) => (
-                  <CardImage key={img.id} src={img.src} alt={img.id} />
+                  <CardImage
+                    key={img.id}
+                    src={`${urlBase}${img.brand}/${img.src}`}
+                    alt={img.id}
+                  />
                 ))}
               </div>
             </div>
