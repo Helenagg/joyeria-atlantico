@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Outlet, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import NavBar from './components/NavBar';
+import WatchStore from './pages/WatchStore';
+import Footer from './components/Footer';
+import WhatsAppPopup from './components/WhatsAppPopup';
+import Contact from './pages/Contact';
+import Accesibility from './pages/Accesibility';
+import Legal from './pages/Legal';
+import Privacy from './pages/Privacy';
+import Cookies from './pages/Cookies';
+import CookiesBanner from './components/CookiesBanner';
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  //TODO: review all alt attributes of all images for accessibility
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/relojes' element={<WatchStore />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/accesibilidad' element={<Accesibility />} />
+        <Route path='/legal' element={<Legal />} />
+        <Route path='/privacidad' element={<Privacy />} />
+        <Route path='/cookies' element={<Cookies />} />
+      </Routes>
+      <WhatsAppPopup />
+      <CookiesBanner />
+      <Footer />
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
