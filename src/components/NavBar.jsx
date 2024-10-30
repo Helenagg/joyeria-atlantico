@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Popover from './popover';
+import Popover from './Popover';
 import AccessibleLink from './Accessibility/AccessibleLink';
 import AccessibleButton from './Accessibility/AccessibleButton';
 
