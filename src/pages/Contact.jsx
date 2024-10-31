@@ -5,8 +5,37 @@ import { FaLinkedin } from 'react-icons/fa6';
 import { AiFillTikTok } from 'react-icons/ai';
 import AccessibleLink from '../components/Accessibility/AccessibleLink';
 import AccessibleButton from '../components/Accessibility/AccessibleButton';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [responseMessage, setResponseMessage] = useState('');
+
+  const onSubmit = async () => {
+    try {
+      const response = await fetch(
+        'https://joyeria-atlantico.vercel.app/api/sendEmail',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, subject, message }),
+        }
+      );
+
+      if (response.ok) {
+        setResponseMessage('Correo enviado con éxito');
+      } else {
+        setResponseMessage('Error al enviar el correo');
+      }
+    } catch (error) {
+      console.error('Error', error);
+      setResponseMessage('Error al enviar el correo');
+    }
+  };
+
   return (
     <>
       <div className='mt-28'>
@@ -28,8 +57,7 @@ const Contact = () => {
                   </div>
                   <AccessibleLink
                     to='mailto:joyeria@joyeriaatlantico.com'
-                    className='text-secondary-green-dark text-sm ml-4'
-                  >
+                    className='text-secondary-green-dark text-sm ml-4'>
                     <small className='block'>Correo electrónico</small>
                     <strong>joyeria@joyeriaatlantico.com</strong>
                   </AccessibleLink>
@@ -44,31 +72,30 @@ const Contact = () => {
 
               <ul className='flex mt-4 space-x-4'>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink to='/'
-                  aria-label='Facebook de Joyería Atlántico'
-                  >
+                  <AccessibleLink
+                    to='/'
+                    aria-label='Facebook de Joyería Atlántico'>
                     <FaFacebookSquare className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
                   <AccessibleLink
-                   to='/'
-                   aria-label='TikTok de Joyería Atlántico'
-                   >
+                    to='/'
+                    aria-label='TikTok de Joyería Atlántico'>
                     <AiFillTikTok className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink to='/'
-                    aria-label='Twitter de Joyería Atlántico'
-                  >
+                  <AccessibleLink
+                    to='/'
+                    aria-label='Twitter de Joyería Atlántico'>
                     <FaSquareXTwitter className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink to='/'
-                    aria-label='Linkedin de Joyería Atlántico'
-                  >
+                  <AccessibleLink
+                    to='/'
+                    aria-label='Linkedin de Joyería Atlántico'>
                     <FaLinkedin className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
@@ -80,29 +107,37 @@ const Contact = () => {
             <input
               type='text'
               placeholder='Nombre'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <input
               type='email'
               placeholder='Correo elecrónico'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <input
               type='text'
               placeholder='Asunto'
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <textarea
               placeholder='Mensaje'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               rows='6'
-              className='w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 outline-blue-500'
-            ></textarea>
+              className='w-full text-gray-800 rounded-md px-4 border text-sm pt-2.5 outline-blue-500'></textarea>
             <AccessibleButton
               type='button'
-              className='text-white bg-primary hover:bg-secondary-dark rounded-md text-sm px-4 py-3 w-full !mt-6'
-            >
+              onClick={onSubmit}
+              className='text-white bg-primary hover:bg-secondary-dark rounded-md text-sm px-4 py-3 w-full !mt-6'>
               Enviar
             </AccessibleButton>
+          {responseMessage && <p className='text-red-500 text-xs'>{responseMessage}</p>}
           </form>
         </div>
       </div>
@@ -112,8 +147,7 @@ const Contact = () => {
           className='h-96 w-full'
           allowfullscreen='true'
           loading='lazy'
-          referrerPolicy='no-referrer-when-downgrade'
-        ></iframe>
+          referrerPolicy='no-referrer-when-downgrade'></iframe>
       </div>
     </>
   );
