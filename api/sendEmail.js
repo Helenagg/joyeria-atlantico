@@ -7,10 +7,23 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS,
     },
 });
+console.log('user', process.env.EMAIL_USER);
+console.log('user', process.env.EMAIL_PASS);
 
 module.exports = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
+    }
+
     if (req.method === 'POST') {
         const { name, email, subject, message } = req.body;
+
+        console.log('Datos recibidos:', { name, email, subject, message });
 
         const mailOptions = {
             from: email,

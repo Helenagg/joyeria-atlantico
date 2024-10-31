@@ -32,7 +32,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error', error);
-      setResponseMessage('Error al enviar el correo');
+      setResponseMessage('Error al enviar el correo en catch');
     }
   };
 
