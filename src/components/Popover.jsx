@@ -55,21 +55,21 @@ const Popover = () => {
           </div>
           <div className='px-3 py-2 gap-2'>
             <AccessibleLink
-              href='tel:954000000'
+              to='tel:954000000'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <FaPhone size={20}/>
               954 000 000
             </AccessibleLink>
             <AccessibleLink
-              href='tel:954435738'
+              to='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <MdOutlineAttachEmail size={20}/>
               joyeria@joyeriaatlantico.com
             </AccessibleLink>
             <AccessibleLink
-              href='tel:954435738'
+              to='tel:954435738'
               className='flex gap-4 border rounded-sm p-2 text-gray-900 my-2'
             >
               <MdOutlineContactSupport size={20}/>
