@@ -5,7 +5,7 @@ import WatchesHome from "../components/WatchesHome"
 
 const Home = () => {
   return (
-    <div className="mt-20 mx-6">
+    <div className="mt-2 mx-4">
         <HomeGallery />
         <Presentation />
         <Brands />
