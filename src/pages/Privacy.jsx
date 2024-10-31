@@ -87,7 +87,7 @@ const Privacy = () => {
         No obstante, podrán dirigirse a la autoridad de control que corresponda
         si considera que sus datos no han sido tratados correctamente según la
         legislación vigente: AGENCIA ESPAÑOLA DE PROTECCIÓN DE DATOS {' '}
-        <AccessibleLink href='https://www.aepd.es/'>www.agpd.es</AccessibleLink>
+        <AccessibleLink to='https://www.aepd.es/'>www.agpd.es</AccessibleLink>
       </p>
       <h2 className='mt-10 text-xl text-primary font-bold'>
         ACEPTACIÓN Y CONSENTIMIENTO:

@@ -10,7 +10,7 @@ const NavBar = () => {
     <nav className='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <AccessibleLink
-          href='/'
+          to='/'
           className='flex items-center space-x-3 rtl:space-x-reverse'
           aria-label='Logo de Joyería Atlántico'
           >
@@ -55,7 +55,7 @@ const NavBar = () => {
           <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
             <li>
               <AccessibleLink
-                href='/'
+                to='/'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'
                 aria-current='page'>
                 Inicio
@@ -63,35 +63,35 @@ const NavBar = () => {
             </li>
             <li>
               <AccessibleLink
-                href='/quienes-somos'
+                to='/quienes-somos'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Quiénes somos
               </AccessibleLink>
             </li>
             <li>
               <AccessibleLink
-                href='/joyeria'
+                to='/joyeria'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Joyería
               </AccessibleLink>
             </li>
             <li>
               <AccessibleLink
-                href='/relojes'
+                to='/relojes'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Relojería
               </AccessibleLink>
             </li>
             <li>
               <AccessibleLink
-                href='/contact'
+                to='/contact'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Localízame
               </AccessibleLink>
             </li>
             <li>
               <AccessibleLink
-                href='/reseñas'
+                to='/reseñas'
                 className='block py-2 px-3 text-white bg-secondary-green-dark rounded md:bg-transparent md:text-secondary-green-dark hover:text-secondary md:p-0 md:dark:text-white'>
                 Reseñas
               </AccessibleLink>
