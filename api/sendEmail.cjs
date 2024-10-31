@@ -6,9 +6,9 @@ const transporter = nodemailer.createTransport({
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
+    
 });
-console.log('user', process.env.EMAIL_USER);
-console.log('user', process.env.EMAIL_PASS);
+
 
 module.exports = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
             await transporter.sendMail(mailOptions);
             res.status(200).send('Correo enviado con éxito');
         } catch (error) {
-            console.error(error);
+            console.error(error); console.error('Error al enviar el correo:', error);
             res.status(500).send('Error al enviar el correo');
         }
     } else {
