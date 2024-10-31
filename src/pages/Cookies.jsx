@@ -68,7 +68,7 @@ const Cookies = () => {
       </p>
       <p className='mt-6 text-left text-secondary-green-dark'>
         Esta Política de Cookies, se complementa con nuestra{' '}
-        <AccessibleLink href='/privacidad'>
+        <AccessibleLink to='/privacidad'>
           {' '}
           Política de Privacidad
         </AccessibleLink>{' '}
@@ -220,37 +220,37 @@ const Cookies = () => {
           <ul className='ml-4 text-left text-secondary-green-dark'>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.google.com/chrome/answer/95647?hl=es'>
+              <AccessibleLink to='https://support.google.com/chrome/answer/95647?hl=es'>
                 Chrome
               </AccessibleLink>
             </li>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.microsoft.com/es-es/windows/administrar-cookies-en-microsoft-edge-ver-permitir-bloquear-eliminar-y-usar-168dab11-0753-043d-7c16-ede5947fc64d'>
+              <AccessibleLink to='https://support.microsoft.com/es-es/windows/administrar-cookies-en-microsoft-edge-ver-permitir-bloquear-eliminar-y-usar-168dab11-0753-043d-7c16-ede5947fc64d'>
                 Internet Explorer
               </AccessibleLink>
             </li>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias?redirectslug=habilitar-y-deshabilitar-cookies-que-los-sitios-we&redirectlocale=es'>
+              <AccessibleLink to='https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias?redirectslug=habilitar-y-deshabilitar-cookies-que-los-sitios-we&redirectlocale=es'>
                 Firefox
               </AccessibleLink>
             </li>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.apple.com/es-es/guide/safari/sfri11471/mac'>
+              <AccessibleLink to='https://support.apple.com/es-es/guide/safari/sfri11471/mac'>
                 Safari
               </AccessibleLink>
             </li>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.apple.com/es-es/105082'>
+              <AccessibleLink to='https://support.apple.com/es-es/105082'>
                 Safari para IOS (iPhone y iPad)
               </AccessibleLink>
             </li>
             <li>
               -{' '}
-              <AccessibleLink href='https://support.google.com/chrome/answer/114662?hl=es&visit_id=637556507745451445-1489228800&rd=1'>
+              <AccessibleLink to='https://support.google.com/chrome/answer/114662?hl=es&visit_id=637556507745451445-1489228800&rd=1'>
                 Chrome para Android
               </AccessibleLink>
             </li>
@@ -291,7 +291,7 @@ const Cookies = () => {
       <p className='mt-6 text-left text-secondary-green-dark'>
         Asimismo, puede ejercer los derechos que le confiere la normativa
         vigente conforme a lo establecido en nuestra{' '}
-        <AccessibleLink href='/privacy'>Política de Privacidad.</AccessibleLink>
+        <AccessibleLink to='/privacy'>Política de Privacidad.</AccessibleLink>
       </p>
     </div>
   );

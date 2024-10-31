@@ -1,14 +1,15 @@
 import { useLink } from "@react-aria/link";
 import { useRef } from "react"
+import { Link } from "react-router-dom";
 
-const AccessibleLink = ({ href, children, ...props}) => {
+const AccessibleLink = ({ to, children, ...props}) => {
     const ref = useRef();
-    const { linkProps } = useLink({ href }, ref);
+    const { linkProps } = useLink({ href: to }, ref);
 
   return (
-    <a {...linkProps} {...props} ref={ref}>
+    <Link to={to} {...linkProps} {...props} ref={ref}>
         {children}
-    </a>
+    </Link>
   )
 }
 

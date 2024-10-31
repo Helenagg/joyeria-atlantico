@@ -27,7 +27,7 @@ const Contact = () => {
                     <HiOutlineMail size={20} className='text-primary' />
                   </div>
                   <AccessibleLink
-                    href='mailto:joyeria@joyeriaatlantico.com'
+                    to='mailto:joyeria@joyeriaatlantico.com'
                     className='text-secondary-green-dark text-sm ml-4'
                   >
                     <small className='block'>Correo electrónico</small>
@@ -44,7 +44,7 @@ const Contact = () => {
 
               <ul className='flex mt-4 space-x-4'>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink href='/'
+                  <AccessibleLink to='/'
                   aria-label='Facebook de Joyería Atlántico'
                   >
                     <FaFacebookSquare className='text-primary' size={20} />
@@ -52,21 +52,21 @@ const Contact = () => {
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
                   <AccessibleLink
-                   href='/'
+                   to='/'
                    aria-label='TikTok de Joyería Atlántico'
                    >
                     <AiFillTikTok className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink href='/'
+                  <AccessibleLink to='/'
                     aria-label='Twitter de Joyería Atlántico'
                   >
                     <FaSquareXTwitter className='text-primary' size={20} />
                   </AccessibleLink>
                 </li>
                 <li className='bg-[#e6e6e6cf] h-10 w-10 rounded-lg flex items-center justify-center shrink-0'>
-                  <AccessibleLink href='/'
+                  <AccessibleLink to='/'
                     aria-label='Linkedin de Joyería Atlántico'
                   >
                     <FaLinkedin className='text-primary' size={20} />
