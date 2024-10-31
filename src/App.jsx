@@ -11,6 +11,7 @@ import Legal from './pages/Legal';
 import Privacy from './pages/Privacy';
 import Cookies from './pages/Cookies';
 import CookiesBanner from './components/CookiesBanner';
+import Search from './components/Search';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <Search />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/relojes' element={<WatchStore />} />
