@@ -6,7 +6,7 @@ import { AiFillTikTok } from 'react-icons/ai';
 import AccessibleLink from '../components/Accessibility/AccessibleLink';
 import AccessibleButton from '../components/Accessibility/AccessibleButton';
 import { useState } from 'react';
-import { sendEmailText } from '../locale/es';
+import { contactText, sendEmailText } from '../locale/es';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -26,14 +26,14 @@ const Contact = () => {
 
       if (response.ok) {
         setResponseMessage(sendEmailText.SUCCESS_MESSAGE);
+        setIsSuccess(true);
       } else {
         setResponseMessage(sendEmailText.ERROR_MESSAGE);
-        setIsSuccess(true);
+        setIsSuccess(false);
       }
     } catch (error) {
       console.error('Error', error);
       setResponseMessage(sendEmailText.ERROR_MESSAGE_SERVER);
-      setIsSuccess(false);
     }
   };
 
@@ -43,11 +43,10 @@ const Contact = () => {
         <div className='grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow shadow-secondary rounded-md font-[sans-serif]'>
           <div>
             <h1 className='text-primary text-3xl font-extrabold'>
-              Contacta con nosotros
+              {contactText.TITLE}
             </h1>
             <p className='text-sm text-secondary-green-dark mt-4'>
-              Si tienes alguna duda o consulta, así como algún modelo específico
-              no dudas en contactar con nosotros:
+              {contactText.PARAGRAPH}
             </p>
             <div className='mt-12'>
               <h2 className='text-primary text-base font-bold'>Email</h2>
@@ -59,7 +58,7 @@ const Contact = () => {
                   <AccessibleLink
                     to='mailto:joyeria@joyeriaatlantico.com'
                     className='text-secondary-green-dark text-sm ml-4'>
-                    <small className='block'>Correo electrónico</small>
+                    <small className='block'>{contactText.EMAIL}</small>
                     <strong>joyeria@joyeriaatlantico.com</strong>
                   </AccessibleLink>
                 </li>
@@ -68,7 +67,7 @@ const Contact = () => {
 
             <div className='mt-12'>
               <h2 className='text-primary text-base font-bold'>
-                Redes Sociales
+                {contactText.RRSS}
               </h2>
 
               <ul className='flex mt-4 space-x-4'>
@@ -107,27 +106,27 @@ const Contact = () => {
           <form className='ml-auo space-y-4'>
             <input
               type='text'
-              placeholder='Nombre'
+              placeholder={contactText.NAME}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <input
               type='email'
-              placeholder='Correo elecrónico'
+              placeholder={contactText.EMAIL}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <input
               type='text'
-              placeholder='Asunto'
+              placeholder={contactText.SUBJECT}
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               className='w-full text-gray-800 rounded-md py-2.5 px-4 border text-sm outline-blue-500'
             />
             <textarea
-              placeholder='Mensaje'
+              placeholder={contactText.MESSAGE}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows='6'
@@ -136,10 +135,15 @@ const Contact = () => {
               type='button'
               onClick={onSubmit}
               className='text-white bg-primary hover:bg-secondary-dark rounded-md text-sm px-4 py-3 w-full !mt-6'>
-              Enviar
+              {contactText.SUBMIT}
             </AccessibleButton>
             {responseMessage && (
-              <p className={`${isSuccess ? 'text-secondary-green' : 'text-primary'} text-xs`}>{responseMessage}</p>
+              <p
+                className={`${
+                  isSuccess ? 'text-secondary-green' : 'text-primary'
+                } text-xs`}>
+                {responseMessage}
+              </p>
             )}
           </form>
         </div>
