@@ -1267,11 +1267,6 @@ video {
   color: rgb(139 44 53 / var(--tw-text-opacity));
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .text-secondary {
   --tw-text-opacity: 1;
   color: rgb(149 141 131 / var(--tw-text-opacity));
@@ -1280,6 +1275,11 @@ video {
 .text-secondary-dark {
   --tw-text-opacity: 1;
   color: rgb(105 100 100 / var(--tw-text-opacity));
+}
+
+.text-secondary-green {
+  --tw-text-opacity: 1;
+  color: rgb(108 108 102 / var(--tw-text-opacity));
 }
 
 .text-secondary-green-dark {

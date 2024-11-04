@@ -1,9 +1,5 @@
-// const nodemailer = require('nodemailer');
 import nodemailer from 'nodemailer';
 
-
-
-// module.exports = async (req, res) => {
 export default async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -30,8 +26,8 @@ export default async (req, res) => {
     const mailOptions = {
       from: email,
       to: process.env.EMAIL_USER,
-      subject: `Nuevo mensaje de ${name}: ${subject}`,
-      text: message,
+      subject: subject,
+      text: `Nuevo mensaje de ${name}: ${message}`,
       replyTo: email,
     };
 
