@@ -6,6 +6,7 @@ import { AiFillTikTok } from 'react-icons/ai';
 import AccessibleLink from '../components/Accessibility/AccessibleLink';
 import AccessibleButton from '../components/Accessibility/AccessibleButton';
 import { useState } from 'react';
+import { sendEmailText } from '../locale/es';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -13,26 +14,26 @@ const Contact = () => {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmit = async () => {
     try {
-      const response = await fetch(
-        '/api/sendEmail',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, subject, message }),
-        }
-      );
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
 
       if (response.ok) {
-        setResponseMessage('Correo enviado con éxito');
+        setResponseMessage(sendEmailText.SUCCESS_MESSAGE);
       } else {
-        setResponseMessage('Error al enviar el correo');
+        setResponseMessage(sendEmailText.ERROR_MESSAGE);
+        setIsSuccess(true);
       }
     } catch (error) {
       console.error('Error', error);
-      setResponseMessage('Error al enviar el correo en catch');
+      setResponseMessage(sendEmailText.ERROR_MESSAGE_SERVER);
+      setIsSuccess(false);
     }
   };
 
@@ -137,7 +138,9 @@ const Contact = () => {
               className='text-white bg-primary hover:bg-secondary-dark rounded-md text-sm px-4 py-3 w-full !mt-6'>
               Enviar
             </AccessibleButton>
-          {responseMessage && <p className='text-red-500 text-xs'>{responseMessage}</p>}
+            {responseMessage && (
+              <p className={`${isSuccess ? 'text-secondary-green' : 'text-primary'} text-xs`}>{responseMessage}</p>
+            )}
           </form>
         </div>
       </div>
