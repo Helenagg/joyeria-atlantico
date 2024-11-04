@@ -17,7 +17,7 @@ const Contact = () => {
   const onSubmit = async () => {
     try {
       const response = await fetch(
-        'https://joyeria-atlantico.vercel.app/api/sendEmail',
+        '/api/sendEmail',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -32,7 +32,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error', error);
-      setResponseMessage('Error al enviar el correo');
+      setResponseMessage('Error al enviar el correo en catch');
     }
   };
 
