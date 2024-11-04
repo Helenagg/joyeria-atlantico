@@ -17,7 +17,7 @@ const Contact = () => {
   const onSubmit = async () => {
     try {
       const response = await fetch(
-        'https://joyeria-atlantico.vercel.app/api/sendEmail',
+        '/api/sendEmail',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

@@ -13,6 +13,7 @@
     "@react-aria/button": "^3.10.1",
     "@react-aria/link": "^3.7.6",
     "@react-aria/utils": "^3.25.3",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "nodemailer": "^6.9.16",
