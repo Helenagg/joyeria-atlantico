@@ -5,7 +5,7 @@ const Legal = () => {
         Aviso Legal
       </h2>
       <p className='mt-10 text-left text-secondary-green-dark'>
-        Joyería Atlántico responsable del sitio web www.benagila.com, en
+        Joyería Atlántico responsable del sitio web www.joyería-atlantico.com, en
         adelante RESPONSABLE, pone a disposición de los usuarios el presente
         documento, con el que pretende dar cumplimiento a las obligaciones
         dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la

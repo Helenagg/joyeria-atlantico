@@ -23,7 +23,7 @@ const Privacy = () => {
       </p>
       <p className='mt-10 text-left text-secondary-green-dark'>
         El envío de datos de carácter personal es obligatorio para contactar y
-        recibir información sobre los servicios prestados por Benagila SL.
+        recibir información sobre los servicios prestados por Joyería Atlántico.
         Asimismo, el no facilitar los datos personales solicitados o el no
         aceptar la presente política de protección de datos supone la
         imposibilidad de suscribirse, registrarse o recibir información de
@@ -106,7 +106,7 @@ const Privacy = () => {
       <p className='mt-4 text-left text-secondary-green-dark'>
         Joyería Atlántico se reserva el derecho a modificar la presente política
         para adaptarla a novedades legislativas o jurisprudenciales, así como a
-        prácticas de la industria. En dichos supuestos, Benagila SL anunciará en
+        prácticas de la industria. En dichos supuestos, Joyería Atlántico anunciará en
         esta página los cambios introducidos con razonable antelación a su
         puesta en práctica.
       </p>
